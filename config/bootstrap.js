@@ -12,13 +12,13 @@
 module.exports.bootstrap = async function (done) {
   if (await Person.count() > 0) {
     return done();
-  }
+}
 
-  await Person.createEach([
-    { "name": "Martin Choy", "age": "23", "id": 635 },
-    { "name": "Kenny Cheng", "age": "22", "id": 637 }
+await Person.createEach([
+    { name: "Martin Choy", age: 23 },
+    { name: "Kenny Cheng", age: 22 }
     // etc.
-  ]);
+]);
 
   // By convention, this is a good place to set up fake data during development.
   //
