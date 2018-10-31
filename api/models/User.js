@@ -17,8 +17,17 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
     username: {
-      type: "string"
+      type: 'string',
+      unique: true,
+      required: true
     },
+
+    role: {
+      type: 'string',
+      enum: ['admin', 'tester', 'visitor'],
+      defaultsTo: 'visitor'
+  },
+
     supervises: {
 
 
