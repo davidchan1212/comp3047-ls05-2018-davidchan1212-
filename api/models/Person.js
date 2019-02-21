@@ -13,7 +13,7 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
     name: { type: "string" },
-    age: { type: "number" },
+    age: { type: "number"  },
     birthDate: {
       type: 'ref',
       columnType: 'datetime'
