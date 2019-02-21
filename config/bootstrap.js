@@ -11,7 +11,7 @@
 
 module.exports.bootstrap = async function (done) {
 
-  ssails.getInvalidIdMsg = function (opts) {
+  sails.getInvalidIdMsg = function (opts) {
 
     // if (opts.id && isNaN(parseInt(opts.id))) {
     //   return "Primary key specfied is invalid (incorrect type).";
