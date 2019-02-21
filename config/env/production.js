@@ -71,7 +71,8 @@ module.exports = {
       *                                                                           *
       ****************************************************************************/
       // ssl: true,
-
+      adapter: 'sails-mongo',
+      url    : 'mongodb://heroku_05s36zcq:dbc5fd2nph3gbu09eh558hj6d1@ds023213.mlab.com:23213/heroku_05s36zcq'
     },
 
   },
@@ -168,7 +169,8 @@ module.exports = {
   *                                                                          *
   ***************************************************************************/
   session: {
-
+    adapter: 'connect-mongo',
+    url    : 'mongodb://heroku_05s36zcq:dbc5fd2nph3gbu09eh558hj6d1@ds023213.mlab.com:23213/heroku_05s36zcq'},
     /***************************************************************************
     *                                                                          *
     * Production session store configuration.                                  *
@@ -197,8 +199,7 @@ module.exports = {
     //
     //--------------------------------------------------------------------------
 
-
-
+    
     /***************************************************************************
     *                                                                          *
     * Production configuration for the session ID cookie.                      *
@@ -225,7 +226,7 @@ module.exports = {
       maxAge: 24 * 60 * 60 * 1000,  // 24 hours
     },
 
-  },
+  
 
 
 
@@ -240,7 +241,9 @@ module.exports = {
   *                                                                          *
   ***************************************************************************/
   sockets: {
-
+    onlyAllowOrigins: [
+      'https://murmuring-ravine-11845.herokuapp.com'
+    ],
     /***************************************************************************
     *                                                                          *
     * Uncomment the `onlyAllowOrigins` whitelist below to configure which      *
